@@ -1,0 +1,108 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<!-- DW6 -->
+<head>
+<!-- Copyright 2005 Macromedia, Inc. All rights reserved. -->
+<title>SimServer</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+<link href="simserver.css" rel="stylesheet" type="text/css" />
+<style type="text/css">
+<!--
+.style1 {color: #FFFFFF}
+-->
+</style>
+</head>
+<body>
+<span class="style1"></span>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td colspan="2" rowspan="2" nowrap="nowrap"><img src="symbol.jpg" alt="Header image" width="116" height="109" border="0" /></td>
+    <td height="35" colspan="2" valign="top" nowrap="nowrap" class="style1" id="logo"><h1>Simulink SimServer</h1></td>
+    <td width="49">&nbsp;</td>
+  </tr>
+  <tr>
+    <td height="57" colspan="2" id="tagline" valign="top"><h2>an open-source HTTP and XML-RPC server for Matlab Simulink<br />	  
+        </h2>
+    </td>
+	<td width="49">&nbsp;</td>
+  </tr>
+  <tr>
+    <td colspan="5" bgcolor="#3300CC"><img src="mm_spacer.gif" alt="" width="1" height="2" border="0" /></td>
+  </tr>
+
+   <tr>
+    <td colspan="5"><img src="mm_spacer.gif" alt="" width="1" height="2" border="0" /></td>
+  </tr>
+
+  <tr>
+  </tr>
+  <tr>
+    <td width="147" valign="top">&nbsp; &nbsp; <h1><a href="index.htm">Home</a></h1>
+      <h1><a href="usage.htm">How to use it</a></h1>
+      <h1><a href="build.htm">Building from source</a></h1>
+    <h1><a href="jsdemo.htm">Javascript demo</a></h1>
+    <h1><a href="flexdemo.htm">Flex demo</a></h1></td>
+   <td colspan="2" valign="top"><br />
+	<table border="0" cellspacing="0" cellpadding="2" width="797">
+        <tr>
+          <td width="793" height="43" valign="top" class="subHeader"><h1>How to use it</h1></td>
+        </tr>
+        <tr>
+          <td valign="top" class="bodyText"><h2>An example Simulink  model is provided, in example.mdl.</h2>
+            <h2>Hint: The server  works particularly well if you use it with Leonardo Daga’s Real-Time blockset (<a href="http://www.mathworks.com/matlabcentral/fileexchange/loadFile.do?objectId=3175&amp;objectType=file">http://www.mathworks.com/matlabcentral/fileexchange/loadFile.do?objectId=3175&amp;objectType=file</a>),  to slow the model simulation down to real-time, which makes the server more  responsive and means that the client is getting real-time data.</h2>
+            <h1>Config file</h1>
+            <h2>First, edit the  example config file (io_config.cfg) to define the lists of input and output  signals you want to use. When you refresh the model (ctrl-d), the inputs and  outputs should be updated from the config file.</h2>
+            <h1>S-function parameters</h1>
+            <h2>The s-function parameters  should be defined in the following format:<br />
+              80,'io_config.cfg',gcb<br />
+              Where the first  parameter is the TCP port you want the server to bind to (usually port 80 for  an HTTP server).<br />
+              The second  parameter is the path of the config file, in single quotes.<br />
+              The third  parameter is always ‘gcb’, so that the s-function knows the ident of the block  it has been associated with – so it can update the signal names of the i/o  ports.</h2>
+            <h1>Running it</h1>
+            <h2>If you start the simulation  running, you should see the following messages in the Matlab command window:<br />
+              SimServer: Starting webserver  thread<br />
+              SimServer: ServerThread: Starting  webserver on port 80<br />
+              The server is now  serving data on port 80.<br />
+              To prove it, you  can open your web-browser and go to the following URL: <a href="http://localhost/">http://localhost</a></h2>
+            <h2>Other URLs of  interest include:</h2>
+            <ul>
+              <li>
+                <h2><a href="stats.htm">stats</a>, where you’ll get an  XML report of the server status.</h2>
+              </li>
+              <li>
+                <h2><a href="jsdemo.htm">jsdemo</a>, where you’ll get an  demo of a javascript client (with the source included in the ./webroot directory).</h2>
+              </li>
+              <li>
+                <h2><a href="flexdemo.htm">flexdemo</a>, where you’ll get an  demo of an Adobe Flex client.</h2>
+              </li>
+            </ul>
+            <h1>XML-RPC interface</h1>
+            <h2>An example Python script has been provided which shows how  the XML-RPC interface can be used to Get and Set data in a running Simulink  model.</h2>
+            <h2>The XML-RPC API supports  the following methods.</h2>
+            <h2><a>double getVal(string ‘signal_name’)</a></h2>
+            <h2><a>setVal (string ‘signal_name’,double value)</a></h2>
+            <h2><a>int getNumInputs()</a></h2>
+            <h2><a>int getNumOutputs()</a></h2>
+            <h2>string getInputName(int)</h2>
+            <h2>string getOutputName(int)</h2>
+            <h2><a>struct getAllInputs()</a></h2>
+            <h2><a>struct getAllOutputs()</a></h2>
+            <h1>&nbsp;</h1>
+            </td>
+		</tr>
+      </table></td>
+    <td width="24">&nbsp;</td>
+	<td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td width="147">&nbsp;</td>
+    <td width="5">&nbsp;</td>
+    <td width="757">&nbsp;</td>
+    <td width="24">&nbsp;</td>
+	<td width="49">&nbsp;</td>
+  </tr>
+</table>
+<br />
+</body>
+</html>

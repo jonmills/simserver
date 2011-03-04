@@ -1,0 +1,120 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<!-- DW6 -->
+<head>
+<!-- Copyright 2005 Macromedia, Inc. All rights reserved. -->
+<title>SimServer</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+<link href="simserver.css" rel="stylesheet" type="text/css" />
+<style type="text/css">
+<!--
+.style1 {color: #FFFFFF}
+.style2 {font-family: Verdana, Arial, Helvetica, sans-serif}
+-->
+</style>
+</head>
+<body onload="initGain()">
+<script type="text/javascript" src="xmlrpc_lib.js"></script>
+<script type="text/javascript" src="xmlrpc_wrappers.js"></script>
+<script type="text/javascript" src="simserver_client.js"></script>
+<script type="text/javascript">
+<!--
+
+var intervalID;
+
+intervalID = setInterval('refreshScreen()',1000);
+
+function initGain()
+{
+	document.form1.GainDemand.value = SimServer_getVal("SelectedGain");
+}
+
+function changeUpdateRate()
+{
+	clearInterval(intervalID);
+	intervalID = setInterval('refreshScreen()',document.form1.updateRate.value);
+}
+ 
+function refreshScreen()
+{
+	document.form1.ScaledSine.value = SimServer_getVal("ScaledSine");
+}  
+
+function setNewOutputValue()
+{
+	SimServer_setVal("GainDemand",document.form1.GainDemand.value);
+}
+//-->
+</script>
+<span class="style1"></span>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td colspan="2" rowspan="2" nowrap="nowrap"><img src="symbol.jpg" alt="Header image" width="116" height="109" border="0" /></td>
+    <td height="35" colspan="2" valign="top" nowrap="nowrap" class="style1" id="logo"><h1>Simulink SimServer</h1></td>
+    <td width="49">&nbsp;</td>
+  </tr>
+  <tr>
+    <td height="57" colspan="2" id="tagline" valign="top"><h2>an open-source HTTP and XML-RPC server for Matlab Simulink<br />	  
+        </h2>    </td>
+	<td width="49">&nbsp;</td>
+  </tr>
+  <tr>
+    <td colspan="5" bgcolor="#3300CC"><img src="mm_spacer.gif" alt="" width="1" height="2" border="0" /></td>
+  </tr>
+
+   <tr>
+    <td colspan="5"><img src="mm_spacer.gif" alt="" width="1" height="2" border="0" /></td>
+  </tr>
+
+  <tr>  </tr>
+  <tr>
+    <td width="147" valign="top">&nbsp; &nbsp; <h1><a href="index.htm">Home</a></h1>
+      <h1><a href="usage.htm">How to use it</a></h1>
+      <h1><a href="build.htm">Building from source</a></h1>
+    <h1><a href="jsdemo.htm">Javascript demo</a></h1>
+    <h1><a href="flexdemo.htm">Flex demo</a></h1></td>
+   <td colspan="2" valign="top"><br />
+	<table border="0" cellspacing="0" cellpadding="2" width="752">
+        <tr>
+          <td width="748" height="57" valign="top" class="subHeader"><h1>Javascript demo</h1></td>
+        </tr>
+        <tr>
+          <td valign="top" class="bodyText"><form id="form1" name="form1" method="post" action="">
+            <h2><span class="style2">Refresh rate:</span>
+                <select name="updateRate" id="updateRate" onchange="changeUpdateRate()">
+                  <option value="100">100 ms</option>
+                  <option value="500">500 ms</option>
+                  <option value="1000" selected="selected">1 second</option>
+                  <option value="5000">5 seconds</option>
+                  </select>
+            </h2>
+            <table width="200" border="0">
+              <tr>
+                <td><h2>ScaledSine:</h2></td>
+                <td><input type="text" name="ScaledSine" id="ScaledSine" /></td>
+              </tr>
+              <tr>
+                <td><h2>DemandedGain:</h2></td>
+                <td valign="top"><input name="GainDemand" type="text" id="GainDemand" onchange="setNewOutputValue()" /></td>
+              </tr>
+            </table>
+            <p><label></label></p>
+            </form>
+          <h1>&nbsp;</h1>            </td>
+		</tr>
+    </table></td>
+    <td width="24">&nbsp;</td>
+	<td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td width="147">&nbsp;</td>
+    <td width="5">&nbsp;</td>
+    <td width="757">&nbsp;</td>
+    <td width="24">&nbsp;</td>
+	<td width="49">&nbsp;</td>
+  </tr>
+</table>
+<br />
+</body>
+</html>

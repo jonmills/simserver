@@ -1,0 +1,19 @@
+banner {
+	font: normal normal bold large Arial, Helvetica, sans-serif;
+	color: #c0c8f1;
+	text-align: left;
+	background: #e5d5cc;
+	vertical-align: top;
+}
+
+h1 {
+	font: normal normal bold large Arial, Helvetica, sans-serif;
+	color: #c0c8f1;
+	text-align: left;
+}
+
+h2 {
+	font: normal normal normal medium Arial, Helvetica, sans-serif;
+	color: #ccd0e5;
+	text-align: left;
+}

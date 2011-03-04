@@ -1,0 +1,155 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<!-- DW6 -->
+<head>
+<!-- Copyright 2005 Macromedia, Inc. All rights reserved. -->
+<title>SimServer</title>
+<script src="AC_OETags.js" language="javascript"></script>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+<link href="simserver.css" rel="stylesheet" type="text/css" />
+<style type="text/css">
+<!--
+.style1 {color: #FFFFFF}
+.style2 {font-family: Verdana, Arial, Helvetica, sans-serif}
+-->
+</style>
+<script language="JavaScript" type="text/javascript">
+<!--
+// -----------------------------------------------------------------------------
+// Globals
+// Major version of Flash required
+var requiredMajorVersion = 9;
+// Minor version of Flash required
+var requiredMinorVersion = 0;
+// Minor version of Flash required
+var requiredRevision = 28;
+// -----------------------------------------------------------------------------
+// -->
+</script>
+</head>
+<body>
+<span class="style1"></span>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td colspan="2" rowspan="2" nowrap="nowrap"><img src="symbol.jpg" alt="Header image" width="116" height="109" border="0" /></td>
+    <td height="35" colspan="2" valign="top" nowrap="nowrap" class="style1" id="logo"><h1>Simulink SimServer</h1></td>
+    <td width="49">&nbsp;</td>
+  </tr>
+  <tr>
+    <td height="57" colspan="2" id="tagline" valign="top"><h2>an open-source HTTP and XML-RPC server for Matlab Simulink<br />	  
+        </h2>    </td>
+	<td width="49">&nbsp;</td>
+  </tr>
+  <tr>
+    <td colspan="5" bgcolor="#3300CC"><img src="mm_spacer.gif" alt="" width="1" height="2" border="0" /></td>
+  </tr>
+
+   <tr>
+    <td colspan="5"><img src="mm_spacer.gif" alt="" width="1" height="2" border="0" /></td>
+  </tr>
+
+  <tr>  </tr>
+  <tr>
+    <td width="147" valign="top">&nbsp; &nbsp; <h1><a href="index.htm">Home</a></h1>
+      <h1><a href="usage.htm">How to use it</a></h1>
+      <h1><a href="build.htm">Building from source</a></h1>
+    <h1><a href="jsdemo.htm">Javascript demo</a></h1>
+    <h1><a href="flexdemo.htm">Flex demo</a></h1></td>
+   <td colspan="2" valign="top"><br />
+	<table border="0" cellspacing="0" cellpadding="2" width="752">
+        <tr>
+          <td width="748" height="57" valign="top" class="subHeader"><h1>Flex demo</h1></td>
+        </tr>
+        <tr>
+          <td valign="top" class="bodyText">
+<script language="JavaScript" type="text/javascript">
+<!--
+// Version check for the Flash Player that has the ability to start Player Product Install (6.0r65)
+var hasProductInstall = DetectFlashVer(6, 0, 65);
+
+// Version check based upon the values defined in globals
+var hasRequestedVersion = DetectFlashVer(requiredMajorVersion, requiredMinorVersion, requiredRevision);
+
+if ( hasProductInstall && !hasRequestedVersion ) {
+	// DO NOT MODIFY THE FOLLOWING FOUR LINES
+	// Location visited after installation is complete if installation is required
+	var MMPlayerType = (isIE == true) ? "ActiveX" : "PlugIn";
+	var MMredirectURL = window.location;
+    document.title = document.title.slice(0, 47) + " - Flash Player Installation";
+    var MMdoctitle = document.title;
+
+	AC_FL_RunContent(
+		"src", "playerProductInstall",
+		"FlashVars", "MMredirectURL="+MMredirectURL+'&MMplayerType='+MMPlayerType+'&MMdoctitle='+MMdoctitle+"",
+		"width", "243",
+		"height", "254",
+		"align", "middle",
+		"id", "SimServer_flex",
+		"quality", "high",
+		"bgcolor", "#869ca7",
+		"name", "SimServer_flex",
+		"allowScriptAccess","sameDomain",
+		"type", "application/x-shockwave-flash",
+		"pluginspage", "http://www.adobe.com/go/getflashplayer"
+	);
+} else if (hasRequestedVersion) {
+	// if we've detected an acceptable version
+	// embed the Flash Content SWF when all tests are passed
+	AC_FL_RunContent(
+			"src", "SimServer_flex",
+			"width", "347",
+			"height", "298",
+			"align", "middle",
+			"id", "SimServer_flex",
+			"quality", "high",
+			"bgcolor", "#869ca7",
+			"name", "SimServer_flex",
+			"allowScriptAccess","sameDomain",
+			"type", "application/x-shockwave-flash",
+			"pluginspage", "http://www.adobe.com/go/getflashplayer"
+	);
+  } else {  // flash is too old or we can't detect the plugin
+    var alternateContent = 'Alternate HTML content should be placed here. '
+  	+ 'This content requires the Adobe Flash Player. '
+   	+ '<a href=http://www.adobe.com/go/getflash/>Get Flash</a>';
+    document.write(alternateContent);  // insert non-flash content
+  }
+// -->
+</script>
+<noscript>
+  	<object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000"
+			id="SimServer_flex" width="243" height="254"
+			codebase="http://fpdownload.macromedia.com/get/flashplayer/current/swflash.cab">
+			<param name="movie" value="SimServer_flex.swf" />
+			<param name="quality" value="high" />
+			<param name="bgcolor" value="#869ca7" />
+			<param name="allowScriptAccess" value="sameDomain" />
+			<embed src="SimServer_flex.swf" quality="high" bgcolor="#869ca7"
+				width="243" height="254" name="SimServer_flex" align="middle"
+				play="true"
+				loop="false"
+				quality="high"
+				allowScriptAccess="sameDomain"
+				type="application/x-shockwave-flash"
+				pluginspage="http://www.adobe.com/go/getflashplayer">
+			</embed>
+	</object>
+</noscript>          
+          </td>
+		</tr>
+    </table></td>
+    <td width="24">&nbsp;</td>
+	<td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td width="147">&nbsp;</td>
+    <td width="5">&nbsp;</td>
+    <td width="757">&nbsp;</td>
+    <td width="24">&nbsp;</td>
+	<td width="49">&nbsp;</td>
+  </tr>
+</table>
+<br />
+</body>
+</html>

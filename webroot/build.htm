@@ -1,0 +1,85 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<!-- DW6 -->
+<head>
+<!-- Copyright 2005 Macromedia, Inc. All rights reserved. -->
+<title>SimServer</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+<link href="simserver.css" rel="stylesheet" type="text/css" />
+<style type="text/css">
+<!--
+.style1 {color: #FFFFFF}
+-->
+</style>
+</head>
+<body>
+<span class="style1"></span>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td colspan="2" rowspan="2" nowrap="nowrap"><img src="symbol.jpg" alt="Header image" width="116" height="109" border="0" /></td>
+    <td height="35" colspan="2" valign="top" nowrap="nowrap" class="style1" id="logo"><h1>Simulink SimServer</h1></td>
+    <td width="10">&nbsp;</td>
+  </tr>
+  <tr>
+    <td height="57" colspan="2" id="tagline" valign="top"><h2>an open-source HTTP and XML-RPC server for Matlab Simulink<br />	  
+        </h2>
+    </td>
+	<td width="10">&nbsp;</td>
+  </tr>
+  <tr>
+    <td colspan="5" bgcolor="#3300CC"><img src="mm_spacer.gif" alt="" width="1" height="2" border="0" /></td>
+  </tr>
+
+   <tr>
+    <td colspan="5"><img src="mm_spacer.gif" alt="" width="1" height="2" border="0" /></td>
+  </tr>
+
+  <tr>
+  </tr>
+  <tr>
+    <td width="134" valign="top">&nbsp; &nbsp; <h1><a href="index.htm">Home</a></h1>
+      <h1><a href="usage.htm">How to use it</a></h1>
+      <h1><a href="build.htm">Building from source</a></h1>
+    <h1><a href="jsdemo.htm">Javascript demo</a></h1>
+    <h1><a href="flexdemo.htm">Flex demo</a></h1></td>
+   <td colspan="2" valign="top"><br />
+	<table border="0" cellspacing="0" cellpadding="2" width="797">
+        <tr>
+          <td width="793" height="49" valign="top" class="subHeader"><h1>Building from source</h1>
+          </td>
+        </tr>
+        <tr>
+          <td valign="top" class="bodyText"><h2>I’ve included the  binary files for Matlab 2007a, but if you wish to re-build it, or extend it for  your own use, here are the instructions.</h2>
+            <h1>Compiler</h1>
+            <h2>The compiler I  used was the Microsoft Visual C++ compiler V6.0, but it ought to work fine with  newer versions of the Microsoft compiler.</h2>
+            <h1>Source packages</h1>
+            <h2>All of the source  packages required are included in the .\source folder, so you don’t have to  download them. Most of them will require unzipping into their own subfolders. If you'd like to download updated versions, you can find the details below.</h2>
+            <h1>MiniWeb</h1>
+            <h2>The http server  component is the open-source HTTP server MiniWeb (<a href="http://miniweb.sourceforge.net/">http://miniweb.sourceforge.net</a>). The version used  was the latest version from the Sourceforge subversion repository, as of 19/08/2008 (Rev  113). I’ve also included it in the .\source folder. Miniweb is released  under the GPL (GNU General Public License).</h2>
+            <h1>xmlrpc-epi</h1>
+            <h2>The XML-RPC engine  is the open-source xmlrpc-epi library. It can be  downloaded from <a href="http://xmlrpc-epi.sourceforge.net/">http://xmlrpc-epi.sourceforge.net/</a>.  I’ve also included it in the .\source  folder. Xmlrpc-epi is  released under a BSD license.</h2>
+            <h1>expat</h1>
+            <h2>The xmlrpc-epi  library uses the expat xml parser library. Version 2.0.1 was  used (from <a href="http://sourceforge.net/projects/expat/">http://sourceforge.net/projects/expat/</a>).  I’ve also included it in the .\source  folder. Expat is released  under an MIT license.</h2>
+            <h1>Iconv</h1>
+            <h2>Xmlrpc-epi also  uses the iconv library. Libiconv performs conversions between different text  encoding mechanisms. Libiconv is a  component of the GNU project (<a href="http://www.gnu.org/">http://www.gnu.org/</a>). A Windows install version  of Libiconv for Windows can be found at <a href="http://gnuwin32.sourceforge.net/packages/libiconv.htm">http://gnuwin32.sourceforge.net/packages/libiconv.htm</a> ( I’ve also included it in  the .\source folder).  It installs the library in the C:\Program Files\GnuWin32 folder by default,  which is where the build scripts expect to find it. Libiconv is  released under the GPL (GNU General Public License).</h2>
+            <h1>Building it</h1>
+            <h2>Hopefully, if  you’ve got all of the source packages in the right place, all you need to do is  run the build_source m-file script in the top level model folder. It should mex  the whole lot and put the new binary file in the top level model folder.</h2>
+            <h1>&nbsp;</h1>
+            </td>
+		</tr>
+      </table></td>
+    <td width="10">&nbsp;</td>
+	<td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td width="134">&nbsp;</td>
+    <td width="5">&nbsp;</td>
+    <td width="823">&nbsp;</td>
+    <td width="10">&nbsp;</td>
+	<td width="10">&nbsp;</td>
+  </tr>
+</table>
+<br />
+</body>
+</html>

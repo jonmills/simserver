@@ -1,0 +1,126 @@
+-I miniweb
+-I xmlrpc-epi-0.54\src
+-I C:\Progra~1\GnuWin32\include
+-I expat-2.0.1\lib
+
+#-hints
+#-forcehints
+-linelen 120
+-parenfileformat
++quiet
++booltype  BOOL
+-booltrue  true
+-boolfalse false
+#-standard
++strictlib
+
+# Don't warn about ISO reserved words - the check clashes
+# with some of the compiler's directives, e.g. _interrupt.
+-isoreserved
+
+# the flags commented out below are switched on by default or the
+# '-standard' shortcut.
+#
+
+# Naming conventions - supporting Misra 2004 Rules 1.4, 5.1
++distinctexternalnames
++externalnamelen 31
+-externalnamecaseinsensitive
++internalnamelen 31
+-internalnamecaseinsensitive
++internalnamelookalike
+
+# Comment style - supporting Misra 2004 Rules 2.2, 2.3
+#+slashslashcomment
++nestcomment
+
+# Pointer arithmetic - supporting Misra 2004 Rules 17.1, 17.2, 17.4
++ptrarith
+
+# Use of returned values - supporting Misra 2004 Rules 16.10
++retval
+
+# Enforce Else clause in If statements - supporting Misra 2004 Rules 14.10
++elseifcomplete
+
+# Check for breaks and continues - not related to a specific Misra rule, but 
+# a useful indicator for the rules relating to flow control.
++casebreak
++looploopbreak
++switchloopbreak
++loopswitchbreak
++switchswitchbreak
+
+# Enforce compound statements - supporting Misra 2004 Rules 14.8, 14.9
++whileblock
++forblock
++ifblock
+
+# Check for unreachable code - supporting Misra 2004 Rules 14.1
++unreachable
+
+# Check prototype and definition match each other - supporting Misra 2004 Rules 8.3
++protoparammatch
+
+# Other good practice....
++constuse
++fcnuse
++paramuse
++varuse
++typeuse
++enummemuse
++fielduse
++exportheader
+
+###+ansi89limits
++declundef
++exportheadervar
++exportlocal
++fcnmacros
+###+isoreservedinternal
+-maintype
++namechecks
++noparams
++oldstyle
+-preproc
++redecl
+-relaxquals
+
+#+boolops
+#+evalorder
+#+firstcase
+#-floatdouble
+#+gnuextensions
+#-ignorequals
+#-ignoresigns
+#+imptype
+#+incompletetype
+#+incondefs
+#+initsize
+#-longintegral
+#-longunsignedintegral
+#+macroassign
+#+macrofcndecl
+#+macroparams
+#+macroparens
+#+macrostmt
+#-matchanyintegral
+#-modfilesystem
+#+noeffect
+#+noret
+#+predassign
+#+predboolint
+#-protoparamname
+#+realcompare
+#+redef
+#-relaxtypes
+#+shadow
+#+shiftimplementation
+#+shiftnegative
+#+stackref
+#+sysunrecog
+#+type
+#+unrecog
+#+unrecogdirective
+#+usedef
+#+usevarargs
